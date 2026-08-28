@@ -1,0 +1,41 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{ if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+#!/usr/bin/env bash
+set -eufo pipefail
+
+# Exit cleanly if the package isn't installed yet
+if ! command -v warp-cli &> /dev/null; then
+    echo "warp-cli is not installed. Skipping WARP configuration."
+    exit 0
+fi
+
+# Ensure the warp-svc daemon is running before sending commands
+if ! systemctl is-active --quiet warp-svc; then
+    sudo systemctl enable --now warp-svc
+    sleep 2 # Give the daemon a moment to initialize
+fi
+
+# Check current status to avoid duplicate registrations
+STATUS=$(warp-cli --accept-tos status)
+
+if echo "$STATUS" | grep -q "Registration Missing"; then
+    echo "Registering Cloudflare WARP..."
+    warp-cli --accept-tos registration new
+else
+    echo "Cloudflare WARP is already registered."
+fi
+
+# Configure preferred mode (Options: warp, warp+doh, proxy, etc.)
+warp-cli --accept-tos mode warp
+
+#Configure preferred tunnel protocol (Options: Wireguard, MASQUE). For personal networks, I prefer Wireguard for better speed. 
+warp-cli tunnel protocol set Wireguard
+
+# Ensure connection is active
+if echo "$STATUS" | grep -q "Disconnected"; then
+    echo "Connecting to Cloudflare WARP..."
+    warp-cli --accept-tos connect
+fi
+
+{{ end -}}
+{{ end -}}
