@@ -8,10 +8,12 @@ Optimized for Ubuntu (WSL2 and native dual-boot) with a focus on computational w
 
 ## Contents
 
-- Bash configuration
-- Package definitions
-- Automated package installation
-- Chezmoi templates and bootstrap scripts
+* Bash configuration and aliases
+* Git configuration
+* Package definitions and automated installation
+* fcitx5 configuration
+* Cloudflare WARP configuration
+* Chezmoi templates and bootstrap scripts
 
 ## Bootstrap
 

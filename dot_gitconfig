@@ -1,0 +1,13 @@
+[user]
+    name = Tran Quoc Hoang
+    email = tranquochoang.pv@protonmail.com
+    signingkey = 4E79EF454F076E8D
+
+[init]
+    defaultBranch = main
+
+[commit]
+	gpgsign = true
+
+[core]
+    editor = code --wait
