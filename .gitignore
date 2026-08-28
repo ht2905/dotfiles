@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Temporary / backup files
+*.tmp
+*.swp
+*~
+.#*
+
+# Secrets / credentials
+.env
+.env.*
+*.secret
+*.key
+
+# Local-only files
+.local/
