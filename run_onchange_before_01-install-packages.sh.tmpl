@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.osRelease.id "ubuntu" -}}
+#!/usr/bin/env bash
+set -eufo pipefail
+
+# This script will automatically rerun whenever the apt list in packages.yaml is modified.
+sudo apt-get update
+sudo apt-get install -y {{ range .packages.ubuntu.apt }}{{ . }} {{ end }}
+
+{{ end -}}
