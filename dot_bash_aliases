@@ -10,12 +10,6 @@ alias warp-trace='curl https://www.cloudflare.com/cdn-cgi/trace'
 alias warp-wireguard='warp-cli tunnel protocol set WireGuard'
 alias warp-masque='warp-cli tunnel protocol set MASQUE'
 
-# --- APT ---
-alias apt-upgrade='sudo apt full-upgrade'
-
-# --- ANSIBLE ---
-alias ansible-upgrade='pipx upgrade --include-injected ansible'
-
 # -- MISCELLANEOUS ALIASES ---
 alias trash='trash-put'
 alias bat='batcat'
