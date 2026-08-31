@@ -1,0 +1,10 @@
+use_recycle_bin = "true"
+upload_only = "false"
+download_only = "false"
+mirror_local_state = "false"
+
+# Make Onedrive CLI compatible with Obsidian saving system
+delay_inotify_processing = "true"
+inotify_delay = "15"
+# Force the client to use Microsoft Graph Upload Session API for all files, regardless of how small they are
+force_session_upload = "true"
