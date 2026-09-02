@@ -21,6 +21,3 @@ packages:
       - trash-cli
       - tree
       - tmux
-      - fcitx5
-      - fcitx5-config-qt
-      - fcitx5-unikey
