@@ -1,2 +1,3 @@
 ! User filter
 @@||writeandimprove.com/^$document
+@@||roblox.com/^$document
