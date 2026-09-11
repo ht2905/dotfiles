@@ -1,4 +1,4 @@
-! User filter
+! DNS user filter
 @@||writeandimprove.com/^$document
 @@||roblox.com/
 @@||ubuntu.com^
