@@ -1,10 +1,21 @@
-/usr/bin/apt
-/usr/bin/apt-get
-/usr/bin/nala
-/usr/bin/curl
-/usr/bin/wget
-/usr/bin/pro
-/usr/lib/apt/methods/http
-/usr/lib/apt/methods/https
-/usr/lib/apt/methods/mirror
-/usr/lib/apt/methods/gpgv
+apps:
+  - name: apt
+    action: bypass
+
+  - name: apt-get
+    action: bypass
+
+  - name: apt-cache
+    action: bypass
+
+  - name: nala
+    action: bypass
+
+  - name: curl
+    action: bypass
+
+  - name: wget
+    action: bypass
+
+  - name: uv
+    action: bypass
