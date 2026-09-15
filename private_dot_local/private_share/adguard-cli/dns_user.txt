@@ -1,5 +1,5 @@
 ! DNS user filter
-@@||writeandimprove.com/^$document
+@@||writeandimprove.com/
 @@||roblox.com/
 @@||ubuntu.com^
 @@||canonical.com^
