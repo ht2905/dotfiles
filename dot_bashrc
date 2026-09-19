@@ -1,6 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
 # If not running interactively, don't do anything
 case $- in
@@ -119,5 +119,11 @@ eval "$(fzf --bash)"
 # Created by `pipx` on 2026-08-27 17:17:10
 export PATH="$PATH:/home/ht2905/.local/bin"
 
+# Set terminal to vim mode
+set -o vi
+
 # Set VSCode as default editor
-export EDITOR="code --wait"
+export EDITOR="vim"
+
+# Added by Antigravity CLI installer
+export PATH="/home/ht2905/.local/bin:$PATH"
