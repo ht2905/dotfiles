@@ -79,14 +79,13 @@ https_filtering:
   # Requires dns_filtering to be enabled
   encrypted_client_hello: true
 
-# DNS filtering settings – Adguard DNS
+# DNS filtering settings – Default
 dns_filtering:
-  enabled: true
-  upstream: 'https://dns.adguard-dns.com/dns-query'
+  enabled: false
+  upstream: default
   fallbacks: default
   bootstraps: default
-  filters:
-    - 'dns_user.txt'
+  filters: []
   block_ech: false
   listen_port: -1
 
