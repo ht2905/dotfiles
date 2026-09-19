@@ -119,10 +119,7 @@ eval "$(fzf --bash)"
 # Created by `pipx` on 2026-08-27 17:17:10
 export PATH="$PATH:/home/ht2905/.local/bin"
 
-# Set terminal to vim mode
-set -o vi
-
-# Set VSCode as default editor
+# Set vim as default editor
 export EDITOR="vim"
 
 # Added by Antigravity CLI installer
