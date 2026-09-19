@@ -62,11 +62,11 @@ https_filtering:
   # Enable TLS1.3 support
   enable_tls13: true
   # Enable OCSP checks for domains
-  ocsp_check_enabled: true
+  ocsp_check_enabled: false
   # Enforce Certificate Transparency Timestamps checks, like Chrome does
-  enforce_certificate_transparency: true
+  enforce_certificate_transparency: false
   # Filter HTTP/3 (experimental)
-  http3_filtering_enabled: true
+  http3_filtering_enabled: false
   # File with the list of HTTPS exclusions
   exclusions: 'https_exclusions.txt'
   # Secure DNS filtering - filters DoH/DoT requests through local DNS proxy
@@ -77,11 +77,11 @@ https_filtering:
   filter_secure_dns_mode: 'redirect'
   # Encrypted Client Hello (ECH) support - enables ECH for better privacy
   # Requires dns_filtering to be enabled
-  encrypted_client_hello: true
+  encrypted_client_hello: false
 
 # DNS filtering settings – Default
 dns_filtering:
-  enabled: false
+  enabled: true
   upstream: default
   fallbacks: default
   bootstraps: default
@@ -91,7 +91,7 @@ dns_filtering:
 
 # Browsing security settings
 safebrowsing:
-  enabled: true
+  enabled: false
   send_anonymous_statistics: false
 
 # Certificate revocation checking using CRLite
@@ -187,11 +187,11 @@ har_writer:
 # If HTTPS filtering is off, "default" and "bypass_https" do the same.
 # See browsers.yaml for the list of browsers and their settings
 # Wildcard should be last.
-
-# Enable HTTPS filtering system-wide
 apps:
+  - include-list: browsers.yaml
   - name: '*vpn*'
     action: 'bypass'
+    # Don't proxy app traffic through outbound_proxy
     skip_outbound_proxy: true
   - name: '*'
-    action: 'default'
+    action: 'bypass_https'

@@ -119,8 +119,8 @@ eval "$(fzf --bash)"
 # Created by `pipx` on 2026-08-27 17:17:10
 export PATH="$PATH:/home/ht2905/.local/bin"
 
-# Set vim as default editor
-export EDITOR="vim"
+# Set VSCode as default editor
+export EDITOR="code --wait"
 
 # Added by Antigravity CLI installer
 export PATH="/home/ht2905/.local/bin:$PATH"
