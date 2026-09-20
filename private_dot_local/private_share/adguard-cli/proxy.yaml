@@ -81,7 +81,7 @@ https_filtering:
 
 # DNS filtering settings – Default
 dns_filtering:
-  enabled: true
+  enabled: false
   upstream: default
   fallbacks: default
   bootstraps: default
