@@ -6,10 +6,13 @@ packages:
       - build-essential
       - cloudflare-warp
       - cmake
+      - code
       - curl
       - git
       - 7zip
       - gnome-tweaks
+      - gnome-software-plugin-flatpak
+      - flatpak
       #- nala
       #- neovim
       - python3
